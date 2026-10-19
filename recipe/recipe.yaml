@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.6.2"
+  version: "3.7.0"
 
 recipe:
   name: osl-dynamics
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/o/osl-dynamics/osl_dynamics-${{ version }}.tar.gz
-  sha256: 9a206df17a78422d96ff75be73d0248fae059f618cefff7a49ac0942d2d3ad2b
+  sha256: 49e58160ebd5efc5c95308ceb19899150b9fc81158c95c1f1d1d401fbe6d1bc3
 
 build:
   number: 0
@@ -102,6 +102,10 @@ outputs:
       skip:
         - win
     requirements:
+      build:
+        # Nothing is compiled, but conda-forge's macOS CI needs a
+        # c_stdlib_version in the variant config
+        - ${{ stdlib('c') }}
       run:
         - osl-dynamics-base ==${{ version }}
         - if: osx and x86_64
