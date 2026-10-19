@@ -102,6 +102,10 @@ outputs:
       skip:
         - win
     requirements:
+      build:
+        # Nothing is compiled, but conda-forge's macOS CI needs a
+        # c_stdlib_version in the variant config
+        - ${{ stdlib('c') }}
       run:
         - osl-dynamics-base ==${{ version }}
         - if: osx and x86_64
