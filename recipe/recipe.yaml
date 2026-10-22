@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.7.0"
+  version: "3.7.1"
 
 recipe:
   name: osl-dynamics
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/o/osl-dynamics/osl_dynamics-${{ version }}.tar.gz
-  sha256: 49e58160ebd5efc5c95308ceb19899150b9fc81158c95c1f1d1d401fbe6d1bc3
+  sha256: f257f80c16942a3606602278039010e6bf602d6b1561a257792152bee82a23da
 
 build:
   number: 0
