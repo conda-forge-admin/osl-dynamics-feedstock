@@ -233,6 +233,3 @@ Feedstock Maintainers
 
 * [@cgohil8](https://github.com/cgohil8/)
 
-
-<!-- dummy commit to enable rerendering -->
-
